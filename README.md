@@ -22,17 +22,12 @@ TODO:
 *-------------------------- DELETE EVERYTHIG ABOVE ---------------------------*
 
 
-# *NAME* 
+# Dataset-JSON React Demo
 
-This repository should be used for the *Project/Workshop/Hackathon XY* to contain code, minutes, notes, outcomes, discussions and more. It is meant to allow anyone working with the results and discussions to allow flexible collaboration and follow up projects.
-
+This repository shows how to setup react for Dataset-JSON as example.
 ## Description
 
-The main purpose of *Project Name* is to ....
-
-If possible use images as well.
-
-![Image Description](./images/placeholder.png)
+The main purpose of this project is a demonstration.
 
 ## Contribution
 
@@ -56,7 +51,7 @@ When you re-use the source, keep or copy the license information also in the sou
 
 When you want to re-use and refer to the content, please do so like the following:
 
-> Content based on [Project XY (GitHub)](https://github.com/xy/xy) used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
+> Content based on [Dataset-JSON React Demo (GitHub)](https://github.com/KatjaGlassConsulting/dataset-json-react-demo) used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
 
 
