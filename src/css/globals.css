@@ -1,0 +1,178 @@
+.logo {
+    max-height: 30px
+}
+
+.nowrap {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .fullHeight {
+        height: 100%;
+    }
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.right {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    float: right;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #3F3F3F;
+    background-color: #23114A;
+    font-size: 15px;
+    line-height: 1.75;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+.bodyTextColor {
+    color: #3F3F3F;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Raleway', sans-serif;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+b, .ui.segment, p, .ui.list {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.boxCard {
+    max-width: 100%;
+    padding: 5px !important;
+    margin: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    transition: box-shadow .1s ease, -webkit-transform .1s ease;
+    transition: box-shadow .1s ease, transform .1s ease;
+    transition: box-shadow .1s ease, transform .1s ease, -webkit-transform .1s ease;
+}
+
+.miniMargin, .miniMargin.ui.progress {
+    margin: 3px 0 10px 0;
+}
+
+.bodycontent {
+    background-color: #fff;
+    padding: 30px;
+    min-height: 200px;
+}
+
+.hover-white:hover {
+    color: #fff !important;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: #23b1c4 !important;
+}
+
+.footer-title {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.color_dark, a.footer {
+    background: #23114A;
+    color: #ccc;
+}
+
+.color_medium_light {
+    background: #B4A4DA;
+}
+
+.padding_top_bottom {
+    padding: 10px 0;
+}
+
+.padding_top_bottom_mini {
+    padding: 5px 0;
+}
+
+.menu_items_group {
+    padding: 8px 15px;
+    color: rgb(51, 51, 51);
+}
+
+.ui.secondary.menu .item {
+    letter-spacing: 0.28px;
+    font-size: 20px !important;
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+    color: rgb(51, 51, 51) !important;
+    font-weight: 600;
+}
+
+.ui.secondary.menu .item {
+    letter-spacing: 0.28px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+    color: rgb(51, 51, 51) !important;
+    font-weight: 600;
+}
+
+.ui.secondary.menu .item:hover {
+    font-weight: 400;
+}
+
+.ui.secondary.inverted.menu a.item {
+    letter-spacing: 0.28px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+    color: rgb(51, 51, 51) !important;
+    /* font-weight: 600; */
+}
+
+.ui.menu .ui.dropdown .menu>.item {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    font-size: 16px !important;
+}
+
+.bottom_8px {
+    position: absolute;
+    right: 10px;
+    bottom: 16px;
+}
+
+.ui.menu .ui.dropdown .menu>.item {
+    font-weight: bold !important;
+}
+
+.intextlink {
+    cursor: pointer;
+}
+
+.tableSmallDropdown .divider {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
