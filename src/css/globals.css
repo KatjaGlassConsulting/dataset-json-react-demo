@@ -79,7 +79,10 @@ b, .ui.segment, p, .ui.list {
 
 .bodycontent {
     background-color: #fff;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     min-height: 200px;
 }
 
@@ -175,4 +178,9 @@ a:hover, a:focus {
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
+}
+
+.scrollXY {
+  overflow-y: scroll;
+  overflow-x: scroll;
 }

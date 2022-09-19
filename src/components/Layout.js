@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <div className='fullHeight'>
       <HeaderTop />
-      <div className='bodycontent' style={{ paddingTop: '0' }}>
+      <div className='bodycontent'>
         {children}
       </div>
       <FooterBottom />
