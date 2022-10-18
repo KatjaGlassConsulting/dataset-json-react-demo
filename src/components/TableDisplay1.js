@@ -1,10 +1,9 @@
 import React from 'react'
 import { Table } from 'semantic-ui-react'
 
-function TableDisplay(props) {
+function TableDisplay1(props) {
   const currentJson = props.currentJson
   const maxHeight = props.maxHeight || 200
-  console.log('maxHeight', maxHeight)
 
   const renderTable = () => {
     const tableId = Object.keys(currentJson.clinicalData.itemGroupData)[0]
@@ -20,6 +19,9 @@ function TableDisplay(props) {
           </Table.Header>
           <Table.Body>
             {currentJson.clinicalData.itemGroupData[tableId].itemData.map((rowItem, i) => {
+              if (i > 200){
+                return null;
+              }
               return (
                 <Table.Row key={'row_' + i}>
                   {rowItem.map((colItem, j) => {
@@ -37,4 +39,4 @@ function TableDisplay(props) {
   return <div className='scrollXY'>{renderTable()}</div>
 }
 
-export default TableDisplay
+export default TableDisplay1

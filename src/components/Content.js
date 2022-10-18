@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Input, Button } from 'semantic-ui-react'
-
-import TableDisplay from './TableDisplay'
+import { Input, Button, Menu } from 'semantic-ui-react'
 
 import getJsonFromURL from './../API/getJsonFromURL'
+import TableDisplay1 from './TableDisplay1'
+import TableDisplay2 from './TableDisplay2'
+import InfoDisplay from './InfoDisplay'
 
 function Content() {
   const defaultURL =
@@ -11,6 +12,7 @@ function Content() {
 
   const [loadFromURL, setLoadFromURL] = useState(defaultURL)
   const [currentJson, setCurrentJson] = useState(null)
+  const [display, setDisplay] = useState('Table 1')
   const [height, setHeigth] = useState({})
 
   useEffect(() => {
@@ -38,12 +40,39 @@ function Content() {
     getJsonFromURL(loadFromURL, loadFromURLSuccess)
   }
 
-  console.log('complete file as JSON', currentJson)
-  if (currentJson) {
-    console.log('Investigate available itemGroupData Information', Object.keys(currentJson.clinicalData.itemGroupData))
+  // console.log('complete file as JSON', currentJson)
+  // if (currentJson) {
+  //   console.log('Investigate available itemGroupData Information', Object.keys(currentJson.clinicalData.itemGroupData))
+  // }
+
+  const maxTableHeight = height - 250 > 50 ? height - 250 : 200
+
+  const handleDisplayClick = (e, { name }) => {
+    setDisplay(name);
   }
 
-  const maxTableHeight = height - 210 > 50 ? height - 210 : 200
+  const contentTab = () => {
+    return (
+      <Menu pointing secondary style={{ padding: 0 }}>
+        <Menu.Item name='Table 1' active={display === 'Table 1'} onClick={handleDisplayClick} />
+        <Menu.Item name='Table 2' active={display === 'Table 2'} onClick={handleDisplayClick} />
+        <Menu.Item name='Info' active={display === 'Info'} onClick={handleDisplayClick} />
+      </Menu>
+    )
+  }
+
+  const content = () => {
+    switch (display) {
+      case "Table 1":
+        return (<TableDisplay1 currentJson={currentJson} maxHeight={maxTableHeight} />);
+      case "Table 2":
+        return (<TableDisplay2 currentJson={currentJson} maxHeight={maxTableHeight} />);
+      case "Info":
+        return (<InfoDisplay/>);
+      default:
+        return (<p>Other</p>)
+    }
+  }
 
   return (
     <div>
@@ -54,9 +83,9 @@ function Content() {
         onChange={handleOnLoadUrlChange}
         fluid
       />
-      <br></br>
-      {currentJson === null && <p>Please load a JSON file</p>}
-      {currentJson !== null && <TableDisplay currentJson={currentJson} maxHeight={maxTableHeight} />}
+      {currentJson === null && <div><br/><p>Please load a JSON file</p></div>}
+      {currentJson !== null && contentTab()}
+      {currentJson !== null && content()}
     </div>
   )
 }
